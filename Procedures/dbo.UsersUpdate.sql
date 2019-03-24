@@ -24,7 +24,7 @@ AS
 	DECLARE @UserExists INT 
 	SET @UserExists = (SELECT COUNT(*) FROM dbo.Users u WHERE u.ID = @ID)
 
-	IF @UserExists != 0
+	IF @UserExists = 1
 	BEGIN 
 		UPDATE [dbo].[Users]
 		SET [FullName] = ISNULL(@FullName, FullName), 
@@ -43,6 +43,6 @@ AS
 		EXEC UsersSelect @ID
 	END
 	ELSE
-		PRINT 'User Not found'
+		PRINT 'UserID not valid'
 	COMMIT
 GO

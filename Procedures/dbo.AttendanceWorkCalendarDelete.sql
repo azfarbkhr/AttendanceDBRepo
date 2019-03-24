@@ -1,0 +1,14 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE dbo.AttendanceWorkCalendarDelete
+		@ID [int] 
+AS
+	SET NOCOUNT ON
+	SET XACT_ABORT ON
+	
+	BEGIN TRANSACTION
+		DELETE FROM [dbo].[AttendanceWorkCalendar]
+		WHERE ([ID] = @ID)
+	COMMIT
+GO
