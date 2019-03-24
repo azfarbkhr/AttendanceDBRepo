@@ -1,0 +1,7 @@
+<DatabaseSettings>
+  <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+  <ServerVersion>Sql2017</ServerVersion>
+  <ServerName>JARVIS</ServerName>
+  <DatabaseName>AttendanceDB</DatabaseName>
+  <DatabaseInformation Version="1" />
+</DatabaseSettings>
